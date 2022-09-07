@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul,ol{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        
+        .box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position:relative;
+            width: 500px;
+            height: 300px;
+            margin:  30px auto;
+            
+        }
+        
+        .list li {
+            position:absolute;
+            top: 0;
+            left:0;
+            opacity: 0;
+            transition:opacity 0.35S ease ;
+            
+        }
+        .list li:first-child{
+            opacity: 1;
+        }
+        .list li img{
+            width: 500px;
+            height: 300px; 
+        }
+        /* 左右按钮 */
+        p{
+            position: absolute;
+            top:50%;
+            left:0;
+            width: 100%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+           
+        }
+        p a {
+            display: block;
+            color:#fff;
+            font-size: 20px;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            background-color: #ccc;
+            opacity: 0.5;
+        }
+        p a:first-child{
+            border-radius: 0 30px 30px 0;
+            text-indent: -5px;
+        }
+        p a:last-child{
+            border-radius: 30px 0 0 30px;
+            text-indent: 5px;
+        }
+        /* 小圆点 */
+        ol{
+            position:absolute;
+            bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        ol li {
+            width: 20px;
+            height: 20px;
+            margin-right:10px;
+            background-color:orange;
+            opacity: 0.5;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        ol li.active{
+            background-color:#fff;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <!-- 图片列表 -->
+        <ul class="list">
+            <li><img src="../img/pic-01.jpg" alt=""></li>
+            <li><img src="../img/pic-02.jpg" alt=""></li>
+            <li><img src="../img/pic-03.jpg" alt=""></li>
+            <li><img src="../img/pic-04.jpg" alt=""></li>
+            <li><img src="../img/pic-05.jpg" alt=""></li>
+            <li><img src="../img/pic-06.jpg" alt=""></li>
+        </ul>
+        <!-- 左右按钮 -->
+        <p>
+            <a href="#"> < </a>
+            <a href="#"> > </a>
+        </p>
+        <!-- 小圆点 -->
+        <ol>
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </div>
+    <script src="./js.js"></script>
+</body>
+</html>

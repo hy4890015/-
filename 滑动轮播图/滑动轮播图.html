@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../animate.js"></script>
+    <script src="./js-滑动轮播图.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul, ol {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        .container{
+            position:relative;
+            width: 500px;
+            height: 300px;
+            margin: 30px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .container ul{
+            position:absolute;
+            left: 0;
+            width:4000px;
+            /* transition: left 0.1s ease-in; */
+        }
+        ul li{
+            float: left;
+            
+        }
+       
+        ul li img{
+            width: 500px;
+            height: 300px;
+        }
+        /* 设置左右箭头 */
+        .arrow{
+            position: absolute;
+            top:50%;
+            width:100%;
+            transform: translateY(-50%);
+            display:flex;
+            justify-content: space-between;
+
+        }
+        .arrow a{
+            height: 40xp;
+            width: 35px;
+            font-size: 30px;
+            color: #fff;
+            line-height: 40px;
+            text-align: center;
+            background-color:rgba(255, 255,255, 0.35);
+        }
+        .arrow a:first-child{
+            border-radius: 0 35px 35px 0;
+            text-indent: -6px;
+        }
+        .arrow a:last-child{
+            border-radius: 35px 0 0 35px;
+            text-indent: 7px;
+
+        }
+        /* 小圆点 */
+        ol{
+            position: absolute;
+            bottom: 20px;
+            display: flex;
+
+        }
+        ol li{
+            height: 15px;
+            width: 15px;
+            margin: 5px;
+            background-color: orange;
+            opacity: 0.5;
+            border-radius: 50%;
+        }
+        ol li.active{
+            background-color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- ul>li*6>img[src="./imgs/img$$.jpg"] -->
+        <ul class="list">
+            <li><img src="../img/pic-06.jpg" alt=""></li>
+            <li><img src="../img/pic-01.jpg" alt=""></li>
+            <li><img src="../img/pic-02.jpg" alt=""></li>
+            <li><img src="../img/pic-03.jpg" alt=""></li>
+            <li><img src="../img/pic-04.jpg" alt=""></li>
+            <li><img src="../img/pic-05.jpg" alt=""></li>
+            <li><img src="../img/pic-06.jpg" alt=""></li>
+            <li><img src="../img/pic-01.jpg" alt=""></li>
+        </ul>
+
+        <!-- 左右按钮 -->
+        <div class="arrow">
+            <a href="javascript:;">&lt;</a>
+            <a href="javascript:;">&gt;</a>
+        </div>
+
+        <!-- 索引下标 -->
+        <ol>
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    
+        
+</body>
+</html>

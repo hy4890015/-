@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js.js"></script>
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+.container {
+    position: relative;
+    width: 590px;
+    height: 470px;
+    margin: 50px auto 0;
+    /* overflow: hidden; */
+}
+
+.container ul {
+    position: relative;
+    left: 0;
+}
+
+.container ul li {
+    float: left;
+}
+
+.container ul li:first-child {
+    opacity: 1;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.arrow a {
+    width: 34px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-family: simsun;
+    font-weight: 700;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.35);
+    color: #fff;
+    display: none;
+}
+
+.arrow a:first-child {
+    border-radius: 0 40px 40px 0;
+    text-indent: -5px;
+}
+
+.arrow a:last-child {
+    border-radius:  40px 0 0 40px;
+    text-indent: 5px;
+}
+
+.container ol {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.container ol li {
+    width: 8px;
+    height: 8px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.55);
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.container ol li.current {
+    width: 10px;
+    height: 10px;
+    background-color: rgb(10, 240, 125);
+    border: 2px solid #ccc;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- ul>li*6>img[src="./imgs/img$$.jpg"] -->
+        <ul class="list">
+            <li><img src="../img/pic-06.jpg" alt=""></li>
+            <li><img src="../img/pic-01.jpg" alt=""></li>
+            <li><img src="../img/pic-02.jpg" alt=""></li>
+            <li><img src="../img/pic-03.jpg" alt=""></li>
+            <li><img src="../img/pic-04.jpg" alt=""></li>
+            <li><img src="../img/pic-05.jpg" alt=""></li>
+            <li><img src="../img/pic-06.jpg" alt=""></li>
+            <li><img src="../img/pic-01.jpg" alt=""></li>
+        </ul>
+
+        <!-- 左右按钮 -->
+        <div class="arrow">
+            <a href="javascript:;">&lt;</a>
+            <a href="javascript:;">&gt;</a>
+        </div>
+
+        <!-- 索引下标 -->
+        <ol>
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    
+        
+</body>
+</html>
